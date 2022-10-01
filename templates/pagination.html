@@ -1,0 +1,16 @@
+<div class="flex items-center justify-start mx-6">
+
+  <div>
+    {% if page.has_previous %}
+  <a  class="flex items-center px-3 py-1 mx-1 text-gray-700 transition-colors duration-300 transform bg-white rounded-sm hover:bg-sky-600 hover:text-white" href="?page={{ page.previous_page_number }}">Previous</a>
+  {% endif %}
+  </div>
+
+  <span class="class="items-center px-4 py-2 mx-1 text-gray-700 transition-colors duration-300 transform bg-white rounded-md sm:flex hover:text-white">
+  Page {{ page.number }} of {{ page.paginator.num_pages }}.
+  </span>
+  {% if page.has_next %}
+  <a class="flex items-center px-3 py-1 mx-1 text-gray-700 transition-colors duration-300 transform bg-white rounded-sm hover:bg-sky-600 hover:text-white" href="?page={{ page.next_page_number }}">Next</a>
+  {% endif %}
+  </span>
+  </div>

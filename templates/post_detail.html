@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+<section class="container px-4 py-4 mx-auto">
+  {% block content %}
+  <div class="w-3/6 m-auto mt-6">
+    <h2 class="text-3xl font-bold text-sky-600">{{ object.title }}</h2>
+    <p class="my-5">{{ object.body }}</p>
+    <div class="mt-4">
+      <a
+        class="px-3 py-2 leading-5 text-white transition-colors duration-300 transform rounded-md bg-sky-400 hover:bg-sky-300 focus:outline-none"
+        href="{% url 'post_edit' post.pk %}"
+        >Edit Post</a
+      >
+      <a
+        class="px-3 py-2 leading-5 text-white transition-colors duration-300 transform bg-red-400 rounded-md hover:bg-red-300 focus:outline-none"
+        href="{% url 'post_delete' post.pk %}"
+        >Delete Post</a
+      >
+    </div>
+  </div>
+  {% endblock content %}
+</section>
