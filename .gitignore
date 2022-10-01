@@ -1,0 +1,4 @@
+.env/
+.env-secret
+__pycache__/
+db.sqlite3
