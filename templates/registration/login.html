@@ -7,6 +7,11 @@
     >
       Login
     </h1>
+    <div class="my-2">
+      <span class="text-red-500">{{form.username.errors}}</span>
+      <span class="text-red-500">{{form.email.errors}}</span>
+      <span class="text-red-500">{{form.password.errors}}</span>
+    </div>
     <form
       class="grid grid-cols-2 gap-4 p-6 bg-gray-100 rounded-sm shadow-lg place-content-center"
       action=""

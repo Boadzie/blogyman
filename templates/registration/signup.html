@@ -7,6 +7,12 @@
     >
       Sign Up
     </h1>
+    <div class="my-2">
+      <span class="text-red-500">{{form.username.errors}}</span>
+      <span class="text-red-500">{{form.email.errors}}</span>
+      <span class="text-red-500">{{form.password1.errors}}</span>
+      <span class="text-red-500">{{form.password2.errors}}</span>
+    </div>
     <form
       class="grid grid-cols-2 gap-4 p-6 bg-gray-100 rounded-sm shadow-lg place-content-center"
       action=""
@@ -16,18 +22,22 @@
 
       <div class="flex flex-col items-start justify-start">
         <span class="">Username </span>
+
         {{form.username|add_class:"rounded-sm w-full" }}
       </div>
       <div class="flex flex-col items-start justify-start">
         <span class="">Email </span>
+
         {{form.email|add_class:"rounded-sm w-full" }}
       </div>
       <div class="flex flex-col items-start justify-center">
         <span class="">Password </span>
+
         {{ form.password1|add_class:"rounded-sm w-full" }}
       </div>
       <div class="flex flex-col items-start justify-center">
         <span class="text-start">Confirm Password </span>
+
         {{ form.password2|add_class:" rounded-sm w-full" }}
       </div>
 
