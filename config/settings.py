@@ -33,6 +33,9 @@ INSTALLED_APPS = [
     "widget_tweaks",
     "accounts.apps.AccountsConfig",
 ]
+
+AUTH_USER_MODEL = "accounts.CustomUser"
+AUTHENTICATION_BACKENDS = ["accounts.backends.EmailBackend"]
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
 TAILWIND_APP_NAME = "theme"

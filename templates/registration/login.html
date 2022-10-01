@@ -14,9 +14,10 @@
     >
       {% csrf_token %}
       <div class="flex flex-col items-start justify-start">
-        <span class="">Username </span>
+        <span class="">Email/Username </span>
         {{form.username|add_class:"rounded-sm w-full" }}
       </div>
+
       <div class="flex flex-col items-start justify-center">
         <span class="">Password </span>
         {{ form.password|add_class:"rounded-sm w-full" }}
