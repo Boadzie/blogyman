@@ -34,8 +34,14 @@ class BlogUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     template_name = "post_edit.html"
     fields = ["title", "body"]
 
+    def test_func(self):
+        return self.get_object().author == self.request.user
+
 
 class BlogDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     template_name = "post_delete.html"
     success_url = reverse_lazy("home")
+
+    def test_func(self):
+        return self.get_object().author == self.request.user

@@ -8,12 +8,14 @@
     </h1>
     <form action="" method="post">
       {% csrf_token %}
-     <div>
+     <div class="mt-4">
+      <span class="">Title </span>
       {{ form.title|add_class:"rounded-sm w-full" }}
      </div>
 
-     <div>
-      {{ form.body|add_class:"mt-4 rounded-sm w-full" }}
+     <div class="mt-4">
+      <span class="">Body </span>
+      {{ form.body|add_class:"mt-2 rounded-sm w-full" }}
      </div>
       <input type="submit" class="px-8 py-2 mt-4 leading-5 text-white transition-colors duration-300 transform bg-green-700 rounded-md hover:bg-green-600 focus:outline-none" value="Save" />
     </form>
