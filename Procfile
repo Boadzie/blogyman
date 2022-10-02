@@ -1,1 +1,1 @@
-web: gunicorn 'blogyman.config.wsgi'
+web: gunicorn 'blogyman.wsgi'
