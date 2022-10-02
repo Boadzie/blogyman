@@ -11,4 +11,4 @@ RUN set -ex && \
   rm -rf /root/.cache/
 COPY . /app/
 EXPOSE 8000
-CMD ["gunicorn", "--bind", ":8000", "--workers", "2", "django_project.wsgi"]
+CMD ["gunicorn", "--bind", ":8000", "--workers", "2", "blogyman.config.wsgi"]
